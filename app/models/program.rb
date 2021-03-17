@@ -3,4 +3,9 @@ class Program < ApplicationRecord
   has_many :sport_programs
   has_many :program_equipments
   has_many :equipments, through: :program_equipments
+
+
+  def self.sport_programs(sport, equipment)
+    require 'pry'; binding.pry
+  end
 end

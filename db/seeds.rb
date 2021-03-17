@@ -3,7 +3,7 @@ Sport.destroy_all
 Equipment.destroy_all
 
 equipment = Equipment.create!([{name: 'band'} , {name: 'barbell'}, {name: 'bench'}, {name: 'box'}, {name: 'cable machine'}, {name: 'dumbbell'}, {name: 'glute-hame'}, {name: 'incline bench'}, {name: 'lat pulldown'}, {name: 'medicine ball'}, {name: 'pullup bar'}, {name: 'squat rack'}, {name: 'kettlebell'}, {name: 'stability ball'}])
-sports = Sport.create!([{name: 'Soccer'}, {name: 'Football'}, {name: 'Climbing'}])
+sports = Sport.create!([{name: 'soccer'}, {name: 'football'}, {name: 'climbing'}])
 programs = Program.create!([{name: 'Womens Intermediate Soccer'}, {name: 'Womens Beginner Soccer'}, {name: 'Womens Advanced Soccer'}, {name: 'Football Intermediate'}, {name: 'Football Advanced'}, {name: 'Climbing Intermediate'}, {name: 'Power Endurance'}, name: 'Recovery'])
 sport_programs = SportProgram.create!([{sport_id: sports[0].id, program_id: programs[0].id}, {sport_id: sports[0].id, program_id: programs[1].id}, {sport_id: sports[0].id, program_id: programs[3].id}, {sport_id: sports[1].id, program_id: programs[4].id}, {sport_id: sports[1].id, program_id: programs[5].id}, {sport_id: sports[2].id, program_id: programs[5].id}])
 
