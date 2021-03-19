@@ -1,0 +1,1 @@
+RequiredEquipment = Struct.new(:name, :id)

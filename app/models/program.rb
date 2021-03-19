@@ -10,4 +10,9 @@ class Program < ApplicationRecord
     by_equipment = joins(:equipments).joins(:sports).where('sports.name': sport).where('equipment.name IN (?)', equipment.split(","))
     by_equipment.reject {|program| program.equipments.where('name not in (?)', equipment.split(",")).first.present?}.uniq
   end
+
+  def self.programs(sport, equipment)
+    by_equipment = joins(:equipments).where('equipment.name IN (?)', equipment.split(","))
+    by_equipment.reject {|program| program.equipments.where('name not in (?)', equipment.split(",")).first.present?}.uniq
+  end
 end
