@@ -1,5 +1,5 @@
 class Sport < ApplicationRecord
   validates_presence_of :name
-  has_many :sport_programs
-  has_many :programs, through: :sport_programs
+  has_many :sports_programs
+  has_many :programs, through: :sports_programs
 end
