@@ -17,7 +17,6 @@ RSpec.describe 'it returns programs' do
     climbing_equipment = ProgramsEquipment.create!([{program_id: programs[5].id, equipment_id: equipment[10].id}, {program_id: programs[5].id, equipment_id: equipment[12].id}, {program_id: programs[5].id, equipment_id: equipment[13].id}])
     power_endurance_equipment = ProgramsEquipment.create!([{program_id: programs[6].id, equipment_id: equipment[12].id}, {program_id: programs[6].id, equipment_id: equipment[3].id}, {program_id: programs[6].id, equipment_id: equipment[11].id}])
     recovery_equipment = ProgramsEquipment.create!([{program_id: programs[7].id, equipment_id: equipment[1].id}, {program_id: programs[7].id, equipment_id: equipment[11].id}])
-
   end
 
   it 'works with sport and equipment params' do
@@ -62,7 +61,6 @@ RSpec.describe 'it returns programs' do
 
     
     programs = JSON.parse(response.body, symbolize_names: true)
-    require 'pry'; binding.pry
     expect(programs).to be_a(Hash)
     expect(programs[:data][0][:type]).to eq("program")
     expect(programs[:data][0][:attributes].keys).to match_array([:id, :name, :sport, :required_equipment])
