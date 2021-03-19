@@ -9,6 +9,5 @@ class Workout
     @name = program["name"]
     @sport = WorkoutSport.new(sport)
     @required_equipment = equipment.map {|item| RequiredEquipment.new(item)}
-    require 'pry'; binding.pry
   end
 end

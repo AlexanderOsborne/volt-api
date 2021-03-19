@@ -6,9 +6,8 @@ RSpec.describe Sport, type: :model do
   end
 
   describe 'relationships' do
-    # it {should belong_to :}
-    it {should have_many :sport_programs}
-    it {should have_many(:programs).through(:sport_programs)}
+    it {should have_many :sports_programs}
+    it {should have_many(:programs).through(:sports_programs)}
   end
 
   describe 'instance methods' do

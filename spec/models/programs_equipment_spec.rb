@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProgramEquipment, type: :model do
+RSpec.describe ProgramsEquipment, type: :model do
 
   describe 'relationships' do
     it {should belong_to :program}
