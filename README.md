@@ -127,6 +127,139 @@ If a matching program or programs are found they will be returned in the followi
     ]
 }
   ```
+ Multiple programs may be returned.
+ ```{
+    "data": [
+        {
+            "id": "1",
+            "type": "program",
+            "attributes": {
+                "id": 1,
+                "name": "Womens Intermediate Soccer",
+                "sport": {
+                    "name": "Soccer",
+                    "id": 1
+                },
+                "required_equipment": [
+                    {
+                        "name": "barbell",
+                        "id": 2
+                    },
+                    {
+                        "name": "bench",
+                        "id": 3
+                    },
+                    {
+                        "name": "dumbbell",
+                        "id": 6
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "type": "program",
+            "attributes": {
+                "id": 2,
+                "name": "Womens Beginner Soccer",
+                "sport": {
+                    "name": "Soccer",
+                    "id": 1
+                },
+                "required_equipment": [
+                    {
+                        "name": "bench",
+                        "id": 3
+                    },
+                    {
+                        "name": "medicine ball",
+                        "id": 10
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3",
+            "type": "program",
+            "attributes": {
+                "id": 3,
+                "name": "Womens Advanced Soccer",
+                "sport": {
+                    "name": "Soccer",
+                    "id": 1
+                },
+                "required_equipment": [
+                    {
+                        "name": "box",
+                        "id": 4
+                    },
+                    {
+                        "name": "squat rack",
+                        "id": 12
+                    },
+                    {
+                        "name": "stability ball",
+                        "id": 14
+                    }
+                ]
+            }
+        },
+        {
+            "id": "6",
+            "type": "program",
+            "attributes": {
+                "id": 6,
+                "name": "Climbing Intermediate",
+                "sport": {
+                    "name": "climbing",
+                    "id": 3
+                },
+                "required_equipment": [
+                    {
+                        "name": "pullup bar",
+                        "id": 11
+                    },
+                    {
+                        "name": "kettlebell",
+                        "id": 13
+                    },
+                    {
+                        "name": "stability ball",
+                        "id": 14
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7",
+            "type": "program",
+            "attributes": {
+                "id": 7,
+                "name": "Power Endurance",
+                "sport": {
+                    "name": "Football",
+                    "id": 2
+                },
+                "required_equipment": [
+                    {
+                        "name": "box",
+                        "id": 4
+                    },
+                    {
+                        "name": "squat rack",
+                        "id": 12
+                    },
+                    {
+                        "name": "kettlebell",
+                        "id": 13
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
  If no program is found the following will be returned
  ```
  {
