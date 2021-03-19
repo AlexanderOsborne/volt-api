@@ -22,7 +22,7 @@ RSpec.describe 'it returns programs' do
   it 'works with sport and equipment params' do
     get "/api/v1/programs?sport=soccer&equipment=bench,dumbbell,barbell"
     
-    require 'pry'; binding.pry
+    # require 'pry'; binding.pry
     programs = JSON.parse(response.body, symbolize_names: true)
     require 'pry'; binding.pry
     expect(response).to be_successful

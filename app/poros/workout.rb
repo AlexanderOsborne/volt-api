@@ -8,7 +8,7 @@ class Workout
     @id = program["id"]
     @name = program["name"]
     @sport = WorkoutSport.new(sport)
-    @required_equipment = equipment.each {|item| RequiredEquipment.new(item)}
-    # require 'pry'; binding.pry
+    @required_equipment = equipment.map {|item| RequiredEquipment.new(item)}
+    require 'pry'; binding.pry
   end
 end

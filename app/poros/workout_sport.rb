@@ -1,8 +1,9 @@
-# class WorkoutSport
+class WorkoutSport
+  attr_reader :name,
+              :id
 
-#   def initialize(sport)
-#     require 'pry'; binding.pry
-#   end
-# end
-
-WorkoutSport = Struct.new(:name, :id)
+  def initialize(sport)
+    @name = sport[0]["name"]
+    @id = sport[0]["id"]
+  end
+end
